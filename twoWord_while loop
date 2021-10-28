@@ -1,0 +1,14 @@
+def twoWords( length, firstLetter):
+    #wordLen=int(input('Enter the length of first word'))
+    #first_letter=input('Enter the first letter of the second word')
+    while True:
+        wordLen=input('Enter a '+ str(length)+ ' letter word please ')
+        if len(wordLen)== length:
+            break
+    while True:
+        the_letter=input('Enter a word starting with letter '+firstLetter+' for second word please ')
+        if (the_letter[0].lower()== firstLetter.lower()):
+            break
+    return[wordLen, the_letter]
+
+print(twoWords(5, 'm'))
