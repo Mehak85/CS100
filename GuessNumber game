@@ -1,0 +1,20 @@
+import random
+def GuessNumber():
+    the_chosen1= random.randint(1,50)
+    print("I'm thinking of a number in the range 0-50. You have five tries to guess it. ")
+    totalGuess=0
+    while (totalGuess<5):
+        yourguess=int(input("Please type your guess "))
+
+        if (yourguess==the_chosen1):
+            print("You are right, i was thinking of "+str(the_chosen1))
+            return
+        elif(yourguess < the_chosen1):
+            print(str(yourguess)+ " is too low ")
+        else:
+            print(str(yourguess)+ " is too high ")
+        totalGuess +=1
+
+    print("you have run out of tries to guess, The number is "+ str(the_chosen1))
+
+GuessNumber()
