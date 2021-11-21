@@ -1,0 +1,26 @@
+class Dog:
+    """ Dog class definition """
+
+    # data attribute
+    species = "Canis familiaris"
+  
+    def __init__(self, _name, _breed):
+        self.name = _name
+        self.breed = _breed
+        self.tricks = []
+
+    def teach(self, trick):
+        # Adding to list
+        self.tricks.append(trick)
+        # Printing message
+        print(self.name + " knows " + trick)
+  
+
+    def knows(self, chkStr):
+        # Checking in tricks list
+        if chkStr in self.tricks:
+            # Printing message
+            print("Yes, " + self.name + " knows " + chkStr)
+        else:
+            # Printing message
+            print("No, " + self.name + " doesn't know " + chkStr)
