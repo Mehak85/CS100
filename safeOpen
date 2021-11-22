@@ -1,0 +1,9 @@
+def safeOpen(filename):
+
+    try:
+      inF=open(filename)
+      return inF
+    except FileNotFoundError:
+      return None
+    
+##print(safeOpen("ghost.txt"))
