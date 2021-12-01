@@ -1,0 +1,30 @@
+def averageSpeed():
+    numTries=0
+    while numTries <2:
+        inputFile=input("Type the Filename: ")
+        inF= safeOpen(inputFile)
+        if inF== None:
+            print("Error!! File not found. Please try again")
+            numTries+=1
+        else:
+            break
+    if numTries ==2 and inF == None:
+        print("Error!!File not found. Yet another human error. You are out of Tries. Goodbye.")
+        return
+    Tot_speed=0
+    Count_speed=0
+    for line in inF:
+        speedx=line.split()
+        for speed in speedx:
+            floatSpeed=safeFloat(speed)
+            if floatSpeed>2:
+                Tot_speed+=floatSpeed
+                Count_speed+=1
+    inF.close()
+    averageSpeed=Tot_speed/ Count_speed
+    print("Average speed is {} miles per hour. ".format(averageSpeed))
+    return
+
+averageSpeed()
+
+
