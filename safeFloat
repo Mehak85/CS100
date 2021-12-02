@@ -1,0 +1,10 @@
+
+def safeFloat(x):
+  try:
+    num=float(x)
+    return num
+  except ValueError:
+    return 0.0
+
+##print(safeFloat('4.9'))
+
